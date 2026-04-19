@@ -1,9 +1,12 @@
-name: Hello world
+name: Git Action Demo
 on: push
 jobs:
-  build:
+  action-demo:
     runs-on: ubuntu-latest
     steps:
-      - name: Build step
-        run: echo "A demo build"
+      - name: Checkout the code
+        uses: actions/checkout@v4
+      - name: print index.html file
+        run: cat index.html
+  
   
